@@ -294,18 +294,18 @@ class UtilsLibrary {
     }
 
     static void goToUpdate(Context context, UpdateFrom updateFrom, URL url) {
-        Intent intent = intentToUpdate(context, updateFrom, url);
-
-        if (updateFrom.equals(UpdateFrom.GOOGLE_PLAY)) {
-            try {
-                context.startActivity(intent);
-            } catch (ActivityNotFoundException e) {
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url.toString()));
-                context.startActivity(intent);
-            }
-        } else {
-            context.startActivity(intent);
-        }
+//        Intent intent = intentToUpdate(context, updateFrom, url);
+//
+//        if (updateFrom.equals(UpdateFrom.GOOGLE_PLAY)) {
+//            try {
+//                context.startActivity(intent);
+//            } catch (ActivityNotFoundException e) {
+//                intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url.toString()));
+//                context.startActivity(intent);
+//            }
+//        } else {
+//            context.startActivity(intent);
+//        }
     }
 
     static Boolean isAbleToShow(Integer successfulChecks, Integer showEvery) {
